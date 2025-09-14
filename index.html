@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>What's Up Wednesday</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Graphik Black', sans-serif;
+            background: #fff8e6;
+            color: #4f2c1d;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            background-color: #ffb500;
+            color: #4f2c1d;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex-wrap: wrap;
+        }
+
+        header img {
+            max-height: 80px;
+        }
+
+        .birthdays {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-weight: bold;
+            color: #4f2c1d;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Overlay effect */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.15);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+            z-index: 1000;
+        }
+
+        section {
+            background: #fff;
+            border: 2px solid #4f2c1d;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 10px rgba(79, 44, 29, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            cursor: pointer;
+            font-family: 'Graphik Black', sans-serif;
+            z-index: 1;
+        }
+
+        section h2 {
+            color: #4f2c1d;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #ffb500;
+            display: inline-block;
+            padding-bottom: 0.3rem;
+        }
+
+        /* Smooth hover effect */
+        section:hover {
+            transform: translateX(20px) scale(1.05); /* slide right and enlarge */
+            box-shadow: 0 15px 25px rgba(79, 44, 29, 0.35);
+            z-index: 2000;
+        }
+
+        section:hover ~ .overlay {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #4f2c1d;
+            color: #fff;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            .birthdays {
+                justify-content: center;
+            }
+            section:hover {
+                transform: translateY(-10px) scale(1.03); /* slightly different on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="assets/images/Whats-Up-Wednesday-Logo.png" alt="What's Up Wednesday Logo">
+    <div class="birthdays">
+        <span>🎉 Alex - Sep 13</span>
+        <span>🎉 Jordan - Sep 15</span>
+        <span>🎉 Taylor - Sep 17</span>
+    </div>
+</header>
+
+<div class="overlay"></div>
+
+<main>
+    <section id="whats-up">
+        <h2>What's Up</h2>
+        <p>Stay updated with the latest happenings, events, and news curated just for you every Wednesday. Engaging stories and highlights to keep you in the loop!</p>
+    </section>
+
+    <section id="reviews">
+        <h2>Reviews</h2>
+        <p>Honest and insightful reviews on trending topics, products, and experiences. See what’s worth your time and money, all from a fresh perspective.</p>
+    </section>
+
+    <section id="tips">
+        <h2>Tips</h2>
+        <p>Practical advice and golden tips to make your week smoother and more productive. From lifestyle hacks to professional insights, we’ve got you covered.</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 What's Up Wednesday | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
