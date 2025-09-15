@@ -1,95 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>What's Up Wednesday</title>
 </head>
-<body style="font-family: 'Graphik Black', sans-serif; background:#fff8e6; color:#4f2c1d; line-height:1.6; margin:0; padding:0; overflow-x:hidden;">
+<body style="margin:0; padding:0; background-color:#fff8e6; font-family: Arial, sans-serif; color:#4f2c1d;">
 
-<!-- Header -->
-<header style="display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; position:sticky; top:0; background-color:#ffb500; color:#4f2c1d; z-index:1000; box-shadow:0 2px 5px rgba(0,0,0,0.1); flex-wrap:wrap;">
-    <img src="assets/images/Whats-Up-Wednesday-Logo.png" alt="What's Up Wednesday Logo" style="max-height:80px;">
-    <div style="display:flex; flex-wrap:wrap; gap:1rem; font-weight:bold; color:#4f2c1d;">
-        <span>🎉 Alex - Sep 13</span>
-        <span>🎉 Jordan - Sep 15</span>
-        <span>🎉 Taylor - Sep 17</span>
-    </div>
-</header>
+<!-- Wrapper -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="background-color:#fff8e6; padding:20px 0;">
+    <tr>
+        <td align="center">
 
-<!-- Main -->
-<main style="max-width:1200px; margin:2rem auto; padding:0 1.5rem; position:relative; z-index:1;">
-    <section data-target="modal1" style="background:#fff; border:2px solid #4f2c1d; border-radius:10px; padding:2rem; margin-bottom:2rem; box-shadow:0 4px 10px rgba(79,44,29,0.2); transition:all 0.4s ease; cursor:pointer; font-family:'Graphik Black', sans-serif; z-index:1;">
-        <h2 style="color:#4f2c1d; margin-bottom:1rem; border-bottom:3px solid #ffb500; display:inline-block; padding-bottom:0.3rem;">What's Up</h2>
-        <p>Stay updated with the latest happenings, events, and news curated just for you every Wednesday. Engaging stories and highlights to keep you in the loop!</p>
-    </section>
+            <!-- Main container -->
+            <table width="600" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff; border:2px solid #4f2c1d; border-radius:10px;">
 
-    <section data-target="modal2" style="background:#fff; border:2px solid #4f2c1d; border-radius:10px; padding:2rem; margin-bottom:2rem; box-shadow:0 4px 10px rgba(79,44,29,0.2); transition:all 0.4s ease; cursor:pointer; font-family:'Graphik Black', sans-serif; z-index:1;">
-        <h2 style="color:#4f2c1d; margin-bottom:1rem; border-bottom:3px solid #ffb500; display:inline-block; padding-bottom:0.3rem;">Reviews</h2>
-        <p>Honest and insightful reviews on trending topics, products, and experiences. See what’s worth your time and money, all from a fresh perspective.</p>
-    </section>
+                <!-- Header -->
+                <tr>
+                    <td align="center" bgcolor="#ffb500" style="padding:20px; border-bottom:2px solid #4f2c1d;">
+                        <img src="assets/images/Whats-Up-Wednesday-Logo.png" alt="What's Up Wednesday Logo" style="max-width:200px; height:auto; display:block;">
+                        <p style="margin:10px 0 0 0; font-weight:bold; font-size:14px; color:#4f2c1d;">
+                            🎉 Alex - Sep 13 &nbsp;&nbsp; 🎉 Jordan - Sep 15 &nbsp;&nbsp; 🎉 Taylor - Sep 17
+                        </p>
+                    </td>
+                </tr>
 
-    <section data-target="modal3" style="background:#fff; border:2px solid #4f2c1d; border-radius:10px; padding:2rem; margin-bottom:2rem; box-shadow:0 4px 10px rgba(79,44,29,0.2); transition:all 0.4s ease; cursor:pointer; font-family:'Graphik Black', sans-serif; z-index:1;">
-        <h2 style="color:#4f2c1d; margin-bottom:1rem; border-bottom:3px solid #ffb500; display:inline-block; padding-bottom:0.3rem;">Tips</h2>
-        <p>Practical advice and golden tips to make your week smoother and more productive. From lifestyle hacks to professional insights, we’ve got you covered.</p>
-    </section>
-</main>
+                <!-- What's Up -->
+                <tr>
+                    <td style="padding:20px; font-size:16px; line-height:1.5; color:#4f2c1d;">
+                        <h2 style="margin:0 0 10px 0; font-size:20px; color:#4f2c1d; border-bottom:3px solid #ffb500; display:inline-block;">What's Up</h2>
+                        <p style="margin:0;">Stay updated with the latest happenings, events, and news curated just for you every Wednesday. Engaging stories and highlights to keep you in the loop!</p>
+                    </td>
+                </tr>
 
-<!-- Modals -->
-<div id="modal1" class="modal" style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(255,255,255,0.95); display:none; justify-content:center; align-items:center; z-index:3000; padding:2rem; overflow-y:auto;">
-    <div style="background:transparent; max-width:800px; width:100%; padding:2rem; border-radius:10px; position:relative; text-align:center;">
-        <span class="close-btn" style="position:absolute; top:20px; right:20px; font-size:2rem; font-weight:bold; color:#4f2c1d; cursor:pointer;">&times;</span>
-        <h2 style="color:#4f2c1d; margin-bottom:1rem; border-bottom:3px solid #ffb500; display:inline-block; padding-bottom:0.3rem; font-size:2rem;">What's Up</h2>
-        <p style="font-size:1.2rem; color:#4f2c1d;">Full details about the latest happenings, events, and news curated for you every Wednesday!</p>
-    </div>
-</div>
+                <!-- Reviews -->
+                <tr>
+                    <td style="padding:20px; font-size:16px; line-height:1.5; color:#4f2c1d;">
+                        <h2 style="margin:0 0 10px 0; font-size:20px; color:#4f2c1d; border-bottom:3px solid #ffb500; display:inline-block;">Reviews</h2>
+                        <p style="margin:0;">Honest and insightful reviews on trending topics, products, and experiences. See what’s worth your time and money, all from a fresh perspective.</p>
+                    </td>
+                </tr>
 
-<div id="modal2" class="modal" style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(255,255,255,0.95); display:none; justify-content:center; align-items:center; z-index:3000; padding:2rem; overflow-y:auto;">
-    <div style="background:transparent; max-width:800px; width:100%; padding:2rem; border-radius:10px; position:relative; text-align:center;">
-        <span class="close-btn" style="position:absolute; top:20px; right:20px; font-size:2rem; font-weight:bold; color:#4f2c1d; cursor:pointer;">&times;</span>
-        <h2 style="color:#4f2c1d; margin-bottom:1rem; border-bottom:3px solid #ffb500; display:inline-block; padding-bottom:0.3rem; font-size:2rem;">Reviews</h2>
-        <p style="font-size:1.2rem; color:#4f2c1d;">Deep-dive reviews on trending topics, products, and experiences. Get the real insights!</p>
-    </div>
-</div>
+                <!-- Tips -->
+                <tr>
+                    <td style="padding:20px; font-size:16px; line-height:1.5; color:#4f2c1d;">
+                        <h2 style="margin:0 0 10px 0; font-size:20px; color:#4f2c1d; border-bottom:3px solid #ffb500; display:inline-block;">Tips</h2>
+                        <p style="margin:0;">Practical advice and golden tips to make your week smoother and more productive. From lifestyle hacks to professional insights, we’ve got you covered.</p>
+                    </td>
+                </tr>
 
-<div id="modal3" class="modal" style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(255,255,255,0.95); display:none; justify-content:center; align-items:center; z-index:3000; padding:2rem; overflow-y:auto;">
-    <div style="background:transparent; max-width:800px; width:100%; padding:2rem; border-radius:10px; position:relative; text-align:center;">
-        <span class="close-btn" style="position:absolute; top:20px; right:20px; font-size:2rem; font-weight:bold; color:#4f2c1d; cursor:pointer;">&times;</span>
-        <h2 style="color:#4f2c1d; margin-bottom:1rem; border-bottom:3px solid #ffb500; display:inline-block; padding-bottom:0.3rem; font-size:2rem;">Tips</h2>
-        <p style="font-size:1.2rem; color:#4f2c1d;">Exclusive tips and hacks to make your life smoother and more productive this week!</p>
-    </div>
-</div>
+                <!-- Footer -->
+                <tr>
+                    <td align="center" bgcolor="#4f2c1d" style="padding:15px;">
+                        <p style="margin:0; font-size:13px; color:#ffffff;">&copy; 2025 What's Up Wednesday | All Rights Reserved</p>
+                    </td>
+                </tr>
 
-<!-- Footer -->
-<footer style="text-align:center; padding:1rem; background-color:#4f2c1d; color:#fff; margin-top:2rem;">
-    <p>&copy; 2025 What's Up Wednesday | All Rights Reserved</p>
-</footer>
+            </table>
+            <!-- End Main Container -->
 
-<script>
-    const sections = document.querySelectorAll("section");
-    const modals = document.querySelectorAll(".modal");
-    const closeBtns = document.querySelectorAll(".close-btn");
-
-    sections.forEach(section => {
-        section.addEventListener("click", () => {
-            const target = section.getAttribute("data-target");
-            document.getElementById(target).style.display = "flex";
-        });
-    });
-
-    closeBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            btn.closest(".modal").style.display = "none";
-        });
-    });
-
-    modals.forEach(modal => {
-        modal.addEventListener("click", (e) => {
-            if (e.target === modal) {
-                modal.style.display = "none";
-            }
-        });
-    });
-</script>
+        </td>
+    </tr>
+</table>
+<!-- End Wrapper -->
 
 </body>
 </html>
