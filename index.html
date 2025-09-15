@@ -3,228 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>What's Up Wednesday</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Graphik Black', sans-serif;
-            background: #fff8e6;
-            color: #4f2c1d;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Header */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            background-color: #ffb500;
-            color: #4f2c1d;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            flex-wrap: wrap;
-        }
-
-        header img {
-            max-height: 80px;
-        }
-
-        .birthdays {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            font-weight: bold;
-            color: #4f2c1d;
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        section {
-            background: #fff;
-            border: 2px solid #4f2c1d;
-            border-radius: 10px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 10px rgba(79, 44, 29, 0.2);
-            transition: all 0.4s ease;
-            cursor: pointer;
-            font-family: 'Graphik Black', sans-serif;
-            z-index: 1;
-        }
-
-        section h2 {
-            color: #4f2c1d;
-            margin-bottom: 1rem;
-            border-bottom: 3px solid #ffb500;
-            display: inline-block;
-            padding-bottom: 0.3rem;
-        }
-
-        section:hover {
-            transform: translateX(10px) scale(1.03);
-            box-shadow: 0 15px 25px rgba(79, 44, 29, 0.35);
-        }
-
-        /* Fullscreen modal */
-        .modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(255, 255, 255, 0.95);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 3000;
-            padding: 2rem;
-            overflow-y: auto;
-            transition: opacity 0.4s ease;
-        }
-
-        .modal.active {
-            display: flex;
-            opacity: 1;
-        }
-
-        .modal-content {
-            background: transparent;
-            max-width: 800px;
-            width: 100%;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .modal-content h2 {
-            color: #4f2c1d;
-            margin-bottom: 1rem;
-            border-bottom: 3px solid #ffb500;
-            display: inline-block;
-            padding-bottom: 0.3rem;
-            font-size: 2rem;
-        }
-
-        .modal-content p {
-            font-size: 1.2rem;
-            color: #4f2c1d;
-        }
-
-        /* X button at top right of screen */
-        .close-btn {
-            position: fixed;
-            top: 20px;
-            right: 30px;
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #4f2c1d;
-            cursor: pointer;
-            z-index: 4000;
-            transition: color 0.3s;
-        }
-
-        .close-btn:hover {
-            color: #ffb500;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #4f2c1d;
-            color: #fff;
-            margin-top: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-            }
-            .birthdays {
-                justify-content: center;
-            }
-            .modal-content h2 {
-                font-size: 1.5rem;
-            }
-            .modal-content p {
-                font-size: 1rem;
-            }
-            .close-btn {
-                font-size: 2rem;
-                right: 20px;
-            }
-        }
-    </style>
 </head>
-<body>
+<body style="font-family: 'Graphik Black', sans-serif; background:#fff8e6; color:#4f2c1d; line-height:1.6; margin:0; padding:0; overflow-x:hidden;">
 
-<header>
-    <img src="assets/images/Whats-Up-Wednesday-Logo.png" alt="What's Up Wednesday Logo">
-    <div class="birthdays">
+<!-- Header -->
+<header style="display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; position:sticky; top:0; background-color:#ffb500; color:#4f2c1d; z-index:1000; box-shadow:0 2px 5px rgba(0,0,0,0.1); flex-wrap:wrap;">
+    <img src="assets/images/Whats-Up-Wednesday-Logo.png" alt="What's Up Wednesday Logo" style="max-height:80px;">
+    <div style="display:flex; flex-wrap:wrap; gap:1rem; font-weight:bold; color:#4f2c1d;">
         <span>🎉 Alex - Sep 13</span>
         <span>🎉 Jordan - Sep 15</span>
         <span>🎉 Taylor - Sep 17</span>
     </div>
 </header>
 
-<main>
-    <section data-target="modal1">
-        <h2>What's Up</h2>
+<!-- Main -->
+<main style="max-width:1200px; margin:2rem auto; padding:0 1.5rem; position:relative; z-index:1;">
+    <section data-target="modal1" style="background:#fff; border:2px solid #4f2c1d; border-radius:10px; padding:2rem; margin-bottom:2rem; box-shadow:0 4px 10px rgba(79,44,29,0.2); transition:all 0.4s ease; cursor:pointer; font-family:'Graphik Black', sans-serif; z-index:1;">
+        <h2 style="color:#4f2c1d; margin-bottom:1rem; border-bottom:3px solid #ffb500; display:inline-block; padding-bottom:0.3rem;">What's Up</h2>
         <p>Stay updated with the latest happenings, events, and news curated just for you every Wednesday. Engaging stories and highlights to keep you in the loop!</p>
     </section>
 
-    <section data-target="modal2">
-        <h2>Reviews</h2>
+    <section data-target="modal2" style="background:#fff; border:2px solid #4f2c1d; border-radius:10px; padding:2rem; margin-bottom:2rem; box-shadow:0 4px 10px rgba(79,44,29,0.2); transition:all 0.4s ease; cursor:pointer; font-family:'Graphik Black', sans-serif; z-index:1;">
+        <h2 style="color:#4f2c1d; margin-bottom:1rem; border-bottom:3px solid #ffb500; display:inline-block; padding-bottom:0.3rem;">Reviews</h2>
         <p>Honest and insightful reviews on trending topics, products, and experiences. See what’s worth your time and money, all from a fresh perspective.</p>
     </section>
 
-    <section data-target="modal3">
-        <h2>Tips</h2>
+    <section data-target="modal3" style="background:#fff; border:2px solid #4f2c1d; border-radius:10px; padding:2rem; margin-bottom:2rem; box-shadow:0 4px 10px rgba(79,44,29,0.2); transition:all 0.4s ease; cursor:pointer; font-family:'Graphik Black', sans-serif; z-index:1;">
+        <h2 style="color:#4f2c1d; margin-bottom:1rem; border-bottom:3px solid #ffb500; display:inline-block; padding-bottom:0.3rem;">Tips</h2>
         <p>Practical advice and golden tips to make your week smoother and more productive. From lifestyle hacks to professional insights, we’ve got you covered.</p>
     </section>
 </main>
 
 <!-- Modals -->
-<div id="modal1" class="modal">
-    <span class="close-btn">&times;</span>
-    <div class="modal-content">
-        <h2>What's Up</h2>
-        <p>Full details about the latest happenings, events, and news curated for you every Wednesday!</p>
+<div id="modal1" class="modal" style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(255,255,255,0.95); display:none; justify-content:center; align-items:center; z-index:3000; padding:2rem; overflow-y:auto;">
+    <div style="background:transparent; max-width:800px; width:100%; padding:2rem; border-radius:10px; position:relative; text-align:center;">
+        <span class="close-btn" style="position:absolute; top:20px; right:20px; font-size:2rem; font-weight:bold; color:#4f2c1d; cursor:pointer;">&times;</span>
+        <h2 style="color:#4f2c1d; margin-bottom:1rem; border-bottom:3px solid #ffb500; display:inline-block; padding-bottom:0.3rem; font-size:2rem;">What's Up</h2>
+        <p style="font-size:1.2rem; color:#4f2c1d;">Full details about the latest happenings, events, and news curated for you every Wednesday!</p>
     </div>
 </div>
 
-<div id="modal2" class="modal">
-    <span class="close-btn">&times;</span>
-    <div class="modal-content">
-        <h2>Reviews</h2>
-        <p>Deep-dive reviews on trending topics, products, and experiences. Get the real insights!</p>
+<div id="modal2" class="modal" style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(255,255,255,0.95); display:none; justify-content:center; align-items:center; z-index:3000; padding:2rem; overflow-y:auto;">
+    <div style="background:transparent; max-width:800px; width:100%; padding:2rem; border-radius:10px; position:relative; text-align:center;">
+        <span class="close-btn" style="position:absolute; top:20px; right:20px; font-size:2rem; font-weight:bold; color:#4f2c1d; cursor:pointer;">&times;</span>
+        <h2 style="color:#4f2c1d; margin-bottom:1rem; border-bottom:3px solid #ffb500; display:inline-block; padding-bottom:0.3rem; font-size:2rem;">Reviews</h2>
+        <p style="font-size:1.2rem; color:#4f2c1d;">Deep-dive reviews on trending topics, products, and experiences. Get the real insights!</p>
     </div>
 </div>
 
-<div id="modal3" class="modal">
-    <span class="close-btn">&times;</span>
-    <div class="modal-content">
-        <h2>Tips</h2>
-        <p>Exclusive tips and hacks to make your life smoother and more productive this week!</p>
+<div id="modal3" class="modal" style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(255,255,255,0.95); display:none; justify-content:center; align-items:center; z-index:3000; padding:2rem; overflow-y:auto;">
+    <div style="background:transparent; max-width:800px; width:100%; padding:2rem; border-radius:10px; position:relative; text-align:center;">
+        <span class="close-btn" style="position:absolute; top:20px; right:20px; font-size:2rem; font-weight:bold; color:#4f2c1d; cursor:pointer;">&times;</span>
+        <h2 style="color:#4f2c1d; margin-bottom:1rem; border-bottom:3px solid #ffb500; display:inline-block; padding-bottom:0.3rem; font-size:2rem;">Tips</h2>
+        <p style="font-size:1.2rem; color:#4f2c1d;">Exclusive tips and hacks to make your life smoother and more productive this week!</p>
     </div>
 </div>
 
-<footer>
+<!-- Footer -->
+<footer style="text-align:center; padding:1rem; background-color:#4f2c1d; color:#fff; margin-top:2rem;">
     <p>&copy; 2025 What's Up Wednesday | All Rights Reserved</p>
 </footer>
 
@@ -236,21 +72,20 @@
     sections.forEach(section => {
         section.addEventListener("click", () => {
             const target = section.getAttribute("data-target");
-            document.getElementById(target).classList.add("active");
+            document.getElementById(target).style.display = "flex";
         });
     });
 
     closeBtns.forEach(btn => {
         btn.addEventListener("click", () => {
-            btn.closest(".modal").classList.remove("active");
+            btn.closest(".modal").style.display = "none";
         });
     });
 
-    // Close modal when clicking outside content
     modals.forEach(modal => {
         modal.addEventListener("click", (e) => {
             if (e.target === modal) {
-                modal.classList.remove("active");
+                modal.style.display = "none";
             }
         });
     });
